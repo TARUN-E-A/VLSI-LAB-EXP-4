@@ -122,6 +122,67 @@ q=d;
 end
 endmodule
 ```
+# updown Counter:
+```
+module updown(clk,rst,updown,out);
+input clk,rst,updown;
+output reg [3:0]out;
+always@(posedge clk)
+begin
+if (rst==1)
+out=4'b0000;
+else if(updown==1)
+out=out+1;
+else
+out=out-1;
+end
+endmodule
+```
+# Mod 10 Counter:
+```
+module mod10(clk,rst,out);
+input clk,rst;
+output reg [3:0]out;
+always@(posedge clk)
+begin
+if (rst==1 | out==4'b1001)
+out=4'b0000;
+else
+out=out+1;
+end
+endmodule
+```
+# Ripple Counter:
+```
+module tff(q,clk,rst);
+input clk,rst;
+output q;
+wire d;
+dff df1(q,d,clk,rst);
+not n1(d,q);
+endmodule
+
+module dff(q,d,clk,rst);
+input d,clk,rst;
+output q;
+reg q;
+always @(posedge clk or posedge rst)
+begin
+if (rst)
+q=1'b0;
+else 
+q=d;
+end
+endmodule
+
+module ripplecounter(clk,rst,q);
+input clk,rst;
+output [3:0]q;
+tff tf1(q[0],clk,rst);
+tff tf3(q[2],q[1],rst);
+tff tf4(q[3],q[2],rst);
+endmodule
+```
 
 # OUTPUT WAVEFORM:
 # SR FLIPFLOP:
@@ -135,6 +196,12 @@ endmodule
 
 # D FLIPFLOP:
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/0ce777a5-6839-40da-8a15-559049c53c8c)
+# updown Counter:
+![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/b48ae927-a8e6-4239-ad35-758cddd165de)
+# Mod 10 Counter:
+![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/088b8b60-4ac2-414c-9796-be682b938c36)
+# Ripple Counter:
+![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/9d2bbf08-9e04-4130-9de6-43df59775fdf)
 
 # RESULT:
 Hence SR, JK, T, D - FLIPFLOP, COUNTER DESIGN are simulated and synthesised using Xilinx ISE.
