@@ -125,19 +125,19 @@ end
 endmodule
 ~~~
 
-### Output:
+### OUTPUT:
 
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/e6f917a8-5b45-4dca-8d28-2b8876a40367)
 
 ## D FLIPFLOP:
 
-### Logic Diagram:
+### LOGIC DIAGRAM:
 
 ![image](https://github.com/karanpro06/VLSI-LAB-EXP-4/assets/119782103/8e827351-3ef8-4a51-9379-1e3baae4baae)
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/dda843c5-f0a0-4b51-93a2-eaa4b7fa8aa0)
 
-**Verilog Code:**
+**VERILOG CODE:**
 
 ~~~
 module dff(d,clk,rst,q);
@@ -153,21 +153,21 @@ end
 endmodule
 ~~~
 
-**Output:**
+**OUTPUT:**
 
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/751c1757-d9a8-4d9e-bce4-cac85e275bf6)
 
 **COUNTER:**
 
-**Updown Counter:**
+**UPDOWN COUNTER:**
 
-**Logic Diagram:**
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/Dhinesh0024/VLSI-LAB-EXP-4/assets/160568927/dd12585a-157f-4b6f-a0c3-b421bb52434c)
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
-**Verilog Code:**
+**VERILOG CODE:**
 
 ~~~
 module udc(clk,rst,updown,out);
@@ -185,18 +185,18 @@ end
 endmodule
 ~~~
 
-**Output:**
+**OUTPUT:**
 
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-4/assets/163630871/fedfede5-4ad6-46a1-a0ad-b90ae15eac1c)
 
 
-**Mod-10 Counter:**
+**MOD 10 COUNTER:**
 
-**Logic Diagram:**
+**LOGIC DIAGRAM:**
 
 ![image](https://github.com/Dhinesh0024/VLSI-LAB-EXP-4/assets/160568927/3a4a4da2-7488-411d-8ea5-2e57c4fd942f)
 
-**Verilog Code:**
+**VERILOG CODE:**
 
 ~~~
 module mod10(clk,rst,out);
